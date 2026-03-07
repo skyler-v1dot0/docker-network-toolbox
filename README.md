@@ -22,7 +22,17 @@ A minimal Debian-based Docker image packed with common network troubleshooting t
 | `telnet` | `telnet` | Basic TCP connectivity checks |
 | `whois` | `whois` | Domain and IP registration lookup |
 
-## Building
+## Pulling from GitHub Container Registry
+
+The image is published to the GitHub Container Registry on every push to `main`.
+
+```bash
+docker pull ghcr.io/skyler-v1dot0/docker-network-toolbox:latest
+```
+
+Versioned releases are also tagged (e.g. `1.0.0`, `1.0`) when a GitHub Release is published.
+
+## Building Locally
 
 ```bash
 docker build -t network-toolbox .
@@ -33,6 +43,10 @@ docker build -t network-toolbox .
 ### Interactive shell (most common)
 
 ```bash
+# From the registry
+docker run --rm -it --network host ghcr.io/skyler-v1dot0/docker-network-toolbox:latest
+
+# From a local build
 docker run --rm -it --network host network-toolbox
 ```
 
