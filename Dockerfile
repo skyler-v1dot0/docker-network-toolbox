@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 debian:stable-slim
 
-LABEL maintainer="skylerandrews"
+LABEL maintainer="skyler-v1dot0"
 LABEL description="Network troubleshooting toolbox for server diagnostics"
 
 ENV DEBIAN_FRONTEND=noninteractive
